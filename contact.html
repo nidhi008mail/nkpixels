@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nidhi Kalia's Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://fontawesome.com/kits"></script>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet' />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    </head>
+    <body>
+    </body>
+    <div class="container">
+        <nav>
+            <img src="Images/Logo_nk.png" class="logo">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark"></i>
+            </ul>
+            <i class="fa-solid fa-bars"></i>
+        </nav>
+       
+    <div class="container6">
+            <div class="one">
+                <div class="header-text3">   
+                        <h8>Get In Touch</h8>
+                    </div>
+            </div>
+        </div>
+  
+        <div class="seven">
+        <div id="contact">
+            <div class="container14">
+                <div class="row">
+                    <div class="contact-left">
+                        <text><i class="fa-solid fa-location-dot"></i>Punjabi Bagh, New Delhi, India</text>
+                        <p><i class="fa-solid fa-paper-plane"></i>nk04mail@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i>9873992619</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/nidhi-k-3a84a0227/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://dribbble.com/Nidhi8"><i class="fa-brands fa-dribbble-square"></i></a>
+                            <a href="https://www.behance.net/nidhi8"><i class="fa-brands fa-behance-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div id="contact1">
+                    <div class="container15">
+                        <div class="row">
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+  </div>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src="script.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxPrAIWK2-_2OWSWxmqs_qSCum0_wT1OQ-IaEvKppfdh3NacSPP9RC2vw8B7Lxf8cde/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Your message has been sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+    <div class="container4">
+        <footer>
+            <div class="footer-text">
+                <h6>Copyright &copy; 2023 Nidhi - All rights reserved</h6>
+                <p1>Made with  <span class="heart">❤️</span>  by Nidhi</p1>
+            </div>
+        </footer>
+        </div>
+</html>
